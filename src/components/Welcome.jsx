@@ -2,9 +2,16 @@ import leftFlower from "../assets/images/left-flowers.png";
 import rightFlower from "../assets/images/right-flowers.png";
 import profileImg from "../assets/images/profile.webp";
 import { FaEnvelope } from "react-icons/fa";
+import { useEffect, useRef } from "react";
 
 // eslint-disable-next-line react/prop-types
 const Welcome = ({ onClose }) => {
+  const buttonRef = useRef();
+
+  useEffect(() => {
+    buttonRef.current.focus();
+  }, []);
+
   return (
     <div className="fixed w-full h-screen bg-white overflow-hidden text-center">
       <img
@@ -21,21 +28,24 @@ const Welcome = ({ onClose }) => {
               className="absolute bg-cover bg-center scale-150"
             />
           </div>
-          <h1 className="font-greatVibes text-5xl font-bold text-[#E3B3A5] mb-2 mt-5">
+          <h1 className="font-greatVibes text-5xl md:text-6xl lg:text-7xl font-bold text-gold mb-2 mt-5">
             Lone & Delphi
           </h1>
-          <p className="font-lora text-base">Kepada Bapak/Ibu/Saudara/i:</p>
-          <h2 className="font-lora text-lg font-bold">Sir Isaac Newton</h2>
-          <small className="font-lora text-xs italic">
+          <p className="font-platypi text-sm md:text-base lg:text-lg">
+            Kepada Bapak/Ibu/Saudara/i:
+          </p>
+          <h2 className="font-platypi text-sm md:text-base lg:text-lg font-bold">
+            Sir Isaac Newton
+          </h2>
+          <small className="font-platypi text-xs md:text-sm lg:text-base italic text-gray-700 mt-2">
             *mohon maaf apabila ada kesalahan penulisan nama dan gelar.
           </small>
           <button
-            className="font-lora text-base mt-2 px-5 py-2 rounded-lg text-white bg-[#E3B3A5] flex items-center justify-center"
+            className="font-lato text-xs md:text-sm lg:text-sm mt-2 px-5 py-2 rounded-lg text-white bg-gold flex items-center justify-center focus:outline-none"
             onClick={onClose}
+            ref={buttonRef}
           >
-            <span className="me-2">
-              <FaEnvelope size={18} />
-            </span>
+            <FaEnvelope size={18} className="me-2" />
             Buka Undangan
           </button>
         </div>

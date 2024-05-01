@@ -13,8 +13,10 @@ const WEDDING_GALLERY = [img1, img2, img4, img5, img6, img7];
 
 const Gallery = () => {
   return (
-    <section className="w-9/12 mx-auto my-20 font-lora text-gold text-center">
-      <h1 className="text-5xl pb-10">PHOTO GALLERY</h1>
+    <section className="w-11/12 mx-auto my-20 text-gold text-center">
+      <h1 className="font-platypi text-3xl md:text-4xl lg:text-5xl pb-10">
+        PHOTO GALLERY
+      </h1>
       <LightGallery
         speed={500}
         download={false}
@@ -27,7 +29,7 @@ const Gallery = () => {
               src={gallery}
               width={400}
               height={400}
-              className="h-[400px] w-[400px] rounded-sm object-cover"
+              className="h-[400px] w-[400px] rounded-md object-cover"
             />
           </a>
         ))}

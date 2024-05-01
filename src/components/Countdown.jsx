@@ -26,44 +26,52 @@ const Countdown = () => {
   });
 
   return (
-    <section className="w-5/6 my-20 mx-auto text-center">
-      <div className="aspect-video border-black bg-black w-6/12 mx-auto">
+    <section className="w-10/12 md:w-9/12 lg:w-8/12 my-20 mx-auto text-center">
+      <div className="aspect-video border-black bg-black w-12/12 md:w-11/12 lg:w-10/12 mx-auto">
         <video controls>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <hr className="w-2/12 my-10 border-gold border-[0.5] mx-auto" />
-      <p className="font-lora text-lg text-gold w-7/12 mx-auto">
+      <p className="font-platypi text-sm md:text-base lg:text-lg text-center text-gold w-12/12 md:w-11/12 lg:w-10/12 mx-auto">
         Siang dan malam berganti begitu cepat, di antara saat-saat mendebarkan
         yang belum pernah kami rasakan sebelumnya. Kami nantikan kehadiran para
         keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari
-        yang bahagia.
+        yang bahagia
       </p>
-      <div className="flex justify-center items-center gap-5 mt-5">
-        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex w-[100px] flex-col justify-center items-center">
-          <span className="font-cousineMono text-3xl">
+      <div className="flex justify-center items-center gap-2 md:gap-3 lg:gap-5 mt-8 w-5/12 mx-auto">
+        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center">
+          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
             {days < 0 ? "0" : days}
           </span>
-          <span className="text-base font-lato">DAYS</span>
+          <span className="text-xs md:text-sm lg:text-base font-lato">
+            DAYS
+          </span>
         </div>
-        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex w-[100px] flex-col justify-center items-center">
-          <span className="font-cousineMono text-3xl">
+        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center">
+          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
             {hours < 0 ? "0" : hours}
           </span>
-          <span className="text-base font-lato">HOURS</span>
+          <span className="text-xs md:text-sm lg:text-base font-lato">
+            HOURS
+          </span>
         </div>
-        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex w-[100px] flex-col justify-center items-center">
-          <span className="font-cousineMono text-3xl">
+        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center">
+          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
             {minutes < 0 ? "0" : minutes}
           </span>
-          <span className="text-base font-lato">MINUTES</span>
+          <span className="text-xs md:text-sm lg:text-base font-lato">
+            MINUTES
+          </span>
         </div>
-        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex w-[100px] flex-col justify-center items-center">
-          <span className="font-cousineMono text-3xl">
+        <div className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center">
+          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
             {seconds < 0 ? "0" : seconds}
           </span>
-          <span className="text-base font-lato">SECONDS</span>
+          <span className="text-xs md:text-sm lg:text-base font-lato">
+            SECONDS
+          </span>
         </div>
       </div>
     </section>

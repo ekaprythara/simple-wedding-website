@@ -10,6 +10,7 @@ export default {
       cousineMono: ["Cousine"],
       poppins: ["Poppins"],
       rubik: ["Rubik"],
+      platypi: ["Platypi"],
     },
     extend: {
       colors: {
@@ -18,6 +19,8 @@ export default {
       backgroundImage: {
         "wood-pattern": "url('/src/assets/images/background.png')",
         berdua: "url('/src/assets/images/Berdua.webp')",
+        heroImgHorizontal: "url('/src/assets/images/Hero.webp')",
+        heroImgVertical: "url('/src/assets/images/profile.webp')",
       },
     },
   },
