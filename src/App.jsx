@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showWelcomePage && (
           <motion.div
             className="fixed w-full h-screen bg-white z-[999]"
@@ -32,7 +32,7 @@ const App = () => {
             <Welcome onClose={() => setShowWelcomePage(false)} />
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <Hero />
       <RgVeda />
       <Profile />

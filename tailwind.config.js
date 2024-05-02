@@ -17,9 +17,8 @@ export default {
         gold: "#988568",
       },
       backgroundImage: {
-        "wood-pattern": "url('/src/assets/images/background.png')",
-        berdua: "url('/src/assets/images/Berdua.webp')",
-        heroImgHorizontal: "url('/src/assets/images/Hero.webp')",
+        ceremonyImg: "url('/src/assets/images/ceremony.webp')",
+        heroImgHorizontal: "url('/src/assets/images/hero.webp')",
         heroImgVertical: "url('/src/assets/images/profile.webp')",
       },
     },

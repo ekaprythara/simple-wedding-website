@@ -6,7 +6,7 @@ import {
   BsFillQuestionCircleFill,
   BsFillXCircleFill,
 } from "react-icons/bs";
-import loading from "../assets/Loading/loading.png";
+import loading from "../assets/loading/loading.png";
 import TimeAgo from "react-timeago";
 import bahasaStrings from "react-timeago/lib/language-strings/id";
 import buildFormatter from "react-timeago/lib/formatters/buildFormatter";
