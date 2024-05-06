@@ -5,7 +5,7 @@ import { FaEnvelope } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 
 // eslint-disable-next-line react/prop-types
-const Welcome = ({ onClose }) => {
+const Welcome = ({ onClose, to }) => {
   const buttonRef = useRef();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Welcome = ({ onClose }) => {
             Kepada Bapak/Ibu/Saudara/i:
           </p>
           <h2 className="font-platypi text-sm md:text-base lg:text-lg font-bold">
-            Sir Isaac Newton
+            {to ? to : "Guest"}
           </h2>
           <small className="font-platypi text-xs md:text-sm lg:text-base italic text-gray-700 mt-2">
             *mohon maaf apabila ada kesalahan penulisan nama dan gelar.

@@ -12,6 +12,7 @@ import bahasaStrings from "react-timeago/lib/language-strings/id";
 import buildFormatter from "react-timeago/lib/formatters/buildFormatter";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 const Wishes = () => {
   const formatter = buildFormatter(bahasaStrings);
@@ -149,26 +150,38 @@ const Wishes = () => {
 
   // ! Return
   return (
-    <section className="w-9/12 mx-auto my-20 text-center">
+    <section className="w-11/12 lg:w-9/12 mx-auto my-20 font-platypi text-center">
       <ToastContainer />
-      <h1 className="text-5xl font-lora text-gold pb-10">KIRIM UCAPAN</h1>
-      <div className="w-full rounded-xl bg-white shadow-md shadow-neutral-500 border border-neutral-300">
+      <motion.h1
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 1 }}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="text-3xl md:text-4xl lg:text-5xl text-gold"
+      >
+        Kirim Ucapan
+      </motion.h1>
+      <div className="w-full rounded-xl bg-white shadow-md shadow-neutral-500 border border-neutral-300 mt-10">
         <div className="px-5 py-3">
-          <p className="flex items-center justify-start gap-2 font-rubik text-[.8rem] text-[#555] md:text-sm lg:text-base">
+          <p className="flex items-center justify-start gap-2 font-platypi text-[.8rem] text-[#555] md:text-sm lg:text-base">
             <FaDove size={18} color="#555" />{" "}
             {countedData.length === 0 ? "0 Ucapan" : countedData + " Ucapan"}
           </p>
         </div>
         <hr className="w-full border-[0.5px] border-[#e0dcd1]" />
         <div className="p-5">
-          <form onSubmit={submitHandler} className="font-rubik">
+          <form onSubmit={submitHandler} className="font-platypi">
             <div className="flex flex-col p-0">
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
                   <input
                     className={
                       nameInputClasses +
-                      " w-full font-rubik rounded-md px-2 py-1 text-base"
+                      " w-full font-platypi rounded-md px-2 py-1 text-base"
                     }
                     type="text"
                     placeholder="Nama"
@@ -230,7 +243,7 @@ const Wishes = () => {
             </div>
             <div className="flex items-center justify-end">
               <button
-                className="text-nanumMyeongjo mb-5 flex items-center justify-center rounded-md bg-green-500 px-4 py-2 text-right text-[.8rem] text-white hover:bg-green-600 md:text-sm lg:text-base"
+                className="font-lato mb-5 flex items-center justify-center rounded-md bg-green-500 px-4 py-2 text-right text-[.8rem] text-white hover:bg-green-600 md:text-sm lg:text-base"
                 type="submit"
               >
                 Kirim
@@ -262,7 +275,7 @@ const Wishes = () => {
                 .map((item, index) => {
                   return (
                     <div key={item.id}>
-                      <div className="flex flex-col gap-1 px-5 py-3 font-rubik">
+                      <div className="flex flex-col gap-1 px-5 py-3 font-platypi">
                         <div className="flex items-center gap-2 text-[.8rem] md:text-sm lg:text-sm">
                           <div className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap text-sky-600 md:max-w-[500px] lg:max-w-[700px]">
                             {item.name}

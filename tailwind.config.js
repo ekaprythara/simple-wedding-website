@@ -21,6 +21,9 @@ export default {
         heroImgHorizontal: "url('/src/assets/images/hero.webp')",
         heroImgVertical: "url('/src/assets/images/profile.webp')",
       },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   plugins: [],

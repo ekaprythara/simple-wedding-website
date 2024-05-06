@@ -71,7 +71,7 @@ const Countdown = () => {
         keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari
         yang bahagia
       </motion.p>
-      <div className="flex justify-center items-center gap-2 md:gap-3 lg:gap-5 mt-8 w-5/12 mx-auto">
+      <div className="flex justify-center items-center gap-1 sm:gap-2 md:gap-3 lg:gap-5 mt-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -81,12 +81,12 @@ const Countdown = () => {
             hidden: { opacity: 0, x: -20 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center"
+          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-[50px] max-w-[100px] flex-1 flex-col justify-center items-center"
         >
-          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
+          <span className="font-cousineMono text-xs sm:text-sm md:text-lg lg:text-2xl">
             {days < 0 ? "0" : days}
           </span>
-          <span className="text-xs md:text-sm lg:text-base font-lato">
+          <span className="text-[0.50rem] md:text-sm lg:text-base font-lato">
             DAYS
           </span>
         </motion.div>
@@ -99,12 +99,12 @@ const Countdown = () => {
             hidden: { opacity: 0, x: -20 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center"
+          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-[50px] max-w-[100px] flex-1 flex-col justify-center items-center"
         >
-          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
+          <span className="font-cousineMono text-xs sm:text-sm md:text-lg lg:text-2xl">
             {hours < 0 ? "0" : hours}
           </span>
-          <span className="text-xs md:text-sm lg:text-base font-lato">
+          <span className="text-[0.50rem] md:text-sm lg:text-base font-lato">
             HOURS
           </span>
         </motion.div>
@@ -117,12 +117,12 @@ const Countdown = () => {
             hidden: { opacity: 0, x: -20 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center"
+          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-[50px] max-w-[100px] flex-1 flex-col justify-center items-center"
         >
-          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
+          <span className="font-cousineMono text-xs sm:text-sm md:text-lg lg:text-2xl">
             {minutes < 0 ? "0" : minutes}
           </span>
-          <span className="text-xs md:text-sm lg:text-base font-lato">
+          <span className="text-[0.50rem] md:text-sm lg:text-base font-lato">
             MINUTES
           </span>
         </motion.div>
@@ -135,12 +135,12 @@ const Countdown = () => {
             hidden: { opacity: 0, x: -20 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-w-[80px] flex-1 flex-col justify-center items-center"
+          className="bg-gold text-white rounded-md font-playFair py-2 px-4 flex min-[50px] max-w-[100px] flex-1 flex-col justify-center items-center"
         >
-          <span className="font-cousineMono text-base md:text-lg lg:text-2xl">
+          <span className="font-cousineMono text-xs sm:text-sm md:text-lg lg:text-2xl">
             {seconds < 0 ? "0" : seconds}
           </span>
-          <span className="text-xs md:text-sm lg:text-base font-lato">
+          <span className="text-[0.50rem] md:text-sm lg:text-base font-lato">
             SECONDS
           </span>
         </motion.div>
